@@ -8,7 +8,8 @@
         "build": "vite build",
         "lint": "eslint .",
         "format": "prettier --write .",
-        "prepare": "husky"
+        "prepare": "husky",
+        "precommit": "npm run lint && npm run format"
     },
     "dependencies": {
         "i18next": "^26.0.8",
@@ -32,6 +33,7 @@
         "vite": "^8.0.10"
     },
     "lint-staged": {
-        "*": "npm run lint && npm run format"
+        "*": "eslint",
+        "*": "prettier --write"
     }
 }

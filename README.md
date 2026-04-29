@@ -1,3 +1,3 @@
 # amamic1803.github.io
 
-todo: setup and config stylelint, config vite, add scss support
+todo: fix lint-staged, setup and config stylelint, config vite, add scss support
