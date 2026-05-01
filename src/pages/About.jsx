@@ -5,7 +5,7 @@ export default function About() {
     return (
         <div>
             <p>about page</p>
-            <button onClick={() => navigate('/')}>home</button>
+            <button onClick={() => navigate("/")}>home</button>
         </div>
     );
 }

@@ -8,9 +8,13 @@ export default function Home() {
     return (
         <div>
             <p>home</p>
-            <button onClick={() => navigate('/about')}>about</button>
+            <button onClick={() => navigate("/about")}>about</button>
             <p>{t("header.home")}</p>
-            <button onClick={() => i18n.changeLanguage(i18n.language === "en" ? "hr" : "en")}>
+            <button
+                onClick={() =>
+                    i18n.changeLanguage(i18n.language === "en" ? "hr" : "en")
+                }
+            >
                 change
             </button>
         </div>
