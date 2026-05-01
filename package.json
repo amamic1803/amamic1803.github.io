@@ -1,15 +1,14 @@
 {
-    "name": "yourusername.github.io",
+    "name": "amamic1803.github.io",
     "private": true,
     "version": "1.0.0",
     "type": "module",
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "lint": "eslint .",
+        "lint": "eslint . && prettier --check . && stylelint **/*.css",
         "format": "prettier --write .",
-        "prepare": "husky",
-        "precommit": "npm run lint && npm run format"
+        "prepare": "husky"
     },
     "dependencies": {
         "i18next": "^26.0.8",
@@ -27,13 +26,9 @@
         "eslint-config-prettier": "^10.1.8",
         "globals": "^17.5.0",
         "husky": "^9.1.7",
-        "lint-staged": "^16.4.0",
         "prettier": "^3.8.3",
         "stylelint": "^17.9.1",
+        "stylelint-config-standard": "^40.0.0",
         "vite": "^8.0.10"
-    },
-    "lint-staged": {
-        "*": "eslint",
-        "*": "prettier --write"
     }
 }
