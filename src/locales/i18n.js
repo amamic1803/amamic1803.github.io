@@ -10,6 +10,10 @@ const resources = {
     hr: { translation: hr },
 };
 
+function updateDocumentLang(lng) {
+    document.documentElement.lang = lng;
+}
+
 i18n.use(LanguageDetector)
     .use(initReactI18next)
     .init({
@@ -24,6 +28,7 @@ i18n.use(LanguageDetector)
             caches: ["localStorage"],
         },
     })
-    .then(() => {});
+    .then(() => updateDocumentLang(i18n.language));
+i18n.on("languageChanged", (lng) => updateDocumentLang(lng));
 
 export default i18n;
